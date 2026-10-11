@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="theme-color" content="#f7b3c9" />
+  <title>For My Sweetheart 💗</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Sacramento&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="hearts" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <div class="side-dots" aria-label="Navigation">
+    <button class="dot active" data-go="0" aria-label="Opening"></button>
+    <button class="dot" data-go="1" aria-label="Birthday"></button>
+    <button class="dot" data-go="2" aria-label="Diary"></button>
+    <button class="dot" data-go="3" aria-label="Wishes"></button>
+    <button class="dot" data-go="4" aria-label="Memories"></button>
+    <button class="dot" data-go="5" aria-label="Cake"></button>
+    <button class="dot" data-go="6" aria-label="Gift"></button>
+  </div>
+
+  <main id="app">
+    <!-- 0: OPENING -->
+    <section class="page active" id="page-0">
+      <div class="envelope-wrap">
+        <button class="envelope" id="openEnvelope" aria-label="Open invitation">
+          <span class="env-back"></span>
+          <span class="env-flap"></span>
+          <span class="env-front"></span>
+          <span class="seal">❤</span>
+        </button>
+        <p class="hint">Ketuk pitanya untuk membuka<br>undangan... ✨</p>
+      </div>
+    </section>
+
+    <!-- 1: BIRTHDAY -->
+    <section class="page" id="page-1">
+      <div class="birthday-card">
+        <div class="card-top-art">🎀🎈</div>
+        <h1>Happy Birthday,<br><em>My Sweetheart</em></h1>
+        <p>Aku sudah menyiapkan sesuatu yang<br>spesial untuk kamu... tekan tombol di<br>bawah untuk memulai!</p>
+        <button class="pink-btn next" data-next="2">Mulai Kejutan <span>→</span></button>
+      </div>
+      <p class="hint">Terbuka! Tekan tombol di surat... ✨</p>
+    </section>
+
+    <!-- 2: DIARY -->
+    <section class="page" id="page-2">
+      <div class="section-heading">
+        <h2>My Secret Diary</h2>
+        <p>Ketuk kotaknya untuk memutar kuncinya &amp; membacanya</p>
+      </div>
+      <button class="diary" id="diaryBtn">
+        <span class="diary-inner">
+          <b>My Secret Diary</b>
+          <span class="lock">🔒</span>
+          <small>TAP TO UNLOCK &amp; OPEN</small>
+        </span>
+      </button>
+      <button class="pink-btn next below" data-next="3">Buka Suratnyaaaaa <span>→</span></button>
+    </section>
+
+    <!-- 3: WISHES -->
+    <section class="page" id="page-3">
+      <div class="section-heading">
+        <h2>Floating Wishes</h2>
+        <p>Setiap harapan kecil ini aku tulis untuk kamu 💗</p>
+      </div>
+      <div class="wishes-card">
+        <div class="wish-icon">💗</div>
+        <div class="wish-lines">
+          <div class="wish-line"><span>🌸</span><b>Semoga hari-hari kamu selalu dipenuhi hal baik.</b></div>
+          <div class="wish-line"><span>✨</span><b>Semoga semua impian kecil dan besar kamu tercapai.</b></div>
+          <div class="wish-line"><span>🎀</span><b>Semoga kamu selalu punya alasan untuk tersenyum.</b></div>
+        </div>
+        <div class="wish-note">
+          <p>Doa kecilku untuk kamu sayangkuuuu,cintakuuuuuuu:<br><strong>semoga kamuu lebihhh banyakk bahagiaaa daripada sedihnya.</strong></p>
+        </div>
+      </div>
+      <h3>Happy Birthday, My Love ♥</h3>
+      <button class="pink-btn next" data-next="4">Lihat Kenangan <span>→</span></button>
+    </section>
+
+    <!-- 4: MEMORIES -->
+    <section class="page" id="page-4">
+      <div class="section-heading">
+        <h2>Our Memories</h2>
+        <p>Tarik &amp; lempar tumpukan foto untuk melihat! 📸</p>
+      </div>
+      <div class="photo-stack" id="photoStack">
+        <article class="polaroid p1"><img src="gambar1.jpg" alt="Memory 1"><span>Memory One 💗</span></article>
+        <article class="polaroid p2"><img src="gambar2.jpg" alt="Memory 2"><span>Memory Two 🥹</span></article>
+        <article class="polaroid p3"><img src="gambar3.jpg" alt="Memory 3"><span>Memory Three ✨</span></article>
+        <article class="polaroid p4"><img src="gambar4.jpg" alt="Memory 4"><span>Memory Four 🎀</span></article>
+      </div>
+      <button class="pink-btn next" data-next="5">Time for Cake! <span>→</span></button>
+    </section>
+
+    <!-- 5: CAKE -->
+    <section class="page" id="page-5">
+      <div class="section-heading">
+        <h2>Time for Cake!</h2>
+        <p>Geser pisaunyaa sayangggggg🎂</p>
+      </div>
+      <div class="cake-area" id="cakeArea">
+        <div class="cake">
+          <div class="candle c1"><i></i></div><div class="candle c2"><i></i></div><div class="candle c3"><i></i></div>
+          <div class="cake-top">♥</div>
+          <div class="tier tier1"></div>
+          <div class="tier tier2"></div>
+          <div class="tier tier3"></div>
+        </div>
+        <div class="knife-track" id="knifeTrack"><div class="knife">🔪</div></div>
+      </div>
+      <button class="pink-btn next" data-next="6">Buka Hadiah <span>→</span></button>
+    </section>
+
+    <!-- 6: GIFT -->
+    <section class="page" id="page-6">
+      <div class="section-heading">
+        <h2>Satu Hal Lagi...</h2>
+        <p>Ketuk kotak kado premium untuk membuka hadiah<br>spesialmu! 🎁</p>
+      </div>
+      <button class="gift" id="giftBtn" aria-label="Open gift">
+        <span class="tag">For You</span>
+        <span class="box-lid"></span><span class="box-body"></span><span class="ribbon-v"></span><span class="ribbon-h"></span>
+      </button>
+      <p class="gift-hint">Made with all my love ♡</p>
+    </section>
+  </main>
+
+  <!-- Diary modal -->
+  <div class="modal" id="diaryModal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="letter-modal">
+      <button class="close" data-close="diaryModal">×</button>
+      <div class="letter-paper">
+        <div class="script">Dearest Love,</div>
+        <div id="letterText" class="letter-text"></div>
+        <div class="script sign">Love always,<br>your person ♡</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Password modal -->
+  <div class="modal" id="passwordModal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="password-box">
+      <div class="mini-lock">🔐</div>
+      <h3>Secret Diary</h3>
+      <p>Masukkan password untuk membuka surat ini.</p>
+      <input id="passwordInput" type="password" placeholder="Password..." autocomplete="off">
+      <button class="pink-btn" id="unlockBtn">Unlock 💗</button>
+      <small id="passwordError">Password salah, cuba lagi ya ♡</small>
+    </div>
+  </div>
+
+  <!-- Final surprise -->
+  <div class="modal" id="giftModal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="final-card">
+      <div class="sparkle-big">✦</div>
+      <h2>Happy Birthday<br><em>My Sweetheart!</em></h2>
+      <p id="finalMessage">Terima kasih sebab hadir dalam hidup aku. Semoga tahun ini jadi salah satu tahun paling indah untuk kamu. 💗</p>
+      <div class="final-photo"><img src="gambar5.jpg" alt="Our favorite photo"></div>
+      <button class="pink-btn" data-close="giftModal">Close with a kiss 💗</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
